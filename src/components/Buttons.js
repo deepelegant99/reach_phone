@@ -1,39 +1,27 @@
 import "../App.css";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import { findAllInRenderedTree } from "react-dom/test-utils";
 
+const Buttons = ({setNumber}) => {
+  //   for (let i = 0; i < 100; i++) {
+  //     <Button text={i} />;
+  //   }
 
-const Blts= ()=>{
+  //     const [numbers, setNumbers]= useState([0, 1, 2])
+  //   return (
+  //       {numbers.map(num=>num )}
+  //   )
 
-    const [button, setButton]=useState([]);
+  const list = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-    useEffect((num)=>{
-        setButton(num);
-    });
+  return (
+    <div>
+      {list.map((item) => {
+        return <Button text={item} setNumber={setNumber} />;
+      })}
+    </div>
+  );
+};
 
-    function attach(num){
-        //button=1;
-        console.log(num);
-        alert("Hi player "+num);
-        
-        //setButton(num);
-    }
-
-    let buttonArray=[11];
-
-
-    const buttonLoop=({buttonArray})=>{
-    {buttonArray.map((blt)=>{
-        return(
- 
-        
-            <Button>1</Button>
-           
-            
-    );
-    })}
-    }
-}
-
-export default Blts;
+export default Buttons;

@@ -5,13 +5,14 @@ import Buttons from "./components/Buttons";
 
 function App() {
 
-  let buttonArray=[];
+  const [number, setNumber]=useState()  
 
 
   return (
     <div className="App">
-      <Display/>
-      <Buttons/>
+      {/* <Display/> */}
+      {number}
+      <Buttons setNumber={setNumber} />
     </div>
   );
 }

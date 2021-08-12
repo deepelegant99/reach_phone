@@ -1,10 +1,10 @@
 import  "../App.css";
 import React, { useState } from "react";
 
-const display=() =>{
+const display=({num}) =>{
 
     return(
-        <div>Hello World</div>
+        <div>{num}</div>
     );
 }
 

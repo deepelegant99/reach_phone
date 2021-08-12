@@ -1,10 +1,9 @@
 import "../App.css";
 import React, {useEffect, useState} from "react";
-import Button from "./Button";
 import { findAllInRenderedTree } from "react-dom/test-utils";
 
 
-const Blts= ()=>{
+const Blt= ()=>{
 
     const [button, setButton]=useState([]);
 
@@ -20,20 +19,14 @@ const Blts= ()=>{
         //setButton(num);
     }
 
-    let buttonArray=[11];
+   
 
-
-    const buttonLoop=({buttonArray})=>{
-    {buttonArray.map((blt)=>{
-        return(
+    return(
  
-        
-            <Button>1</Button>
-           
-            
+        <div className="numbers">
+            <button value="1" className="b1" onClick={() => { attach(1) }}>1</button>           
+            </div>
     );
-    })}
-    }
 }
 
-export default Blts;
+export default Blt;

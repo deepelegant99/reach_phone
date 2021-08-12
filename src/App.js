@@ -4,6 +4,10 @@ import Display from "./components/Display";
 import Buttons from "./components/Buttons";
 
 function App() {
+
+  let buttonArray=[];
+
+
   return (
     <div className="App">
       <Display/>
